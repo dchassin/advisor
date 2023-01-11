@@ -11,7 +11,7 @@ In a terminal window, do the following:
 
 ## Configuration
 
-1. Edit `config.json` and set your name, and the Apply voice you want the speaker to use.
+1. Edit `config.json` and set your name, and the Apple voice you want the speaker to use.
 
 ## Running
 
