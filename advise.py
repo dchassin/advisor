@@ -56,7 +56,9 @@ def set_apikey(key):
   if not openai.api_key:
     api_keyfile = os.getenv('OPENAI_APIKEY_FILE')
     if not api_keyfile:
-      api_keyfile = f"{os.getenv('HOME')}/.openai/api_key"
+      path = f"{os.getenv('HOME')}/.openai"
+      os.path.makedirs(path,exist_ok=True)
+      api_keyfile = os.path.join(path,"api_key")
     with open(api_keyfile,"w") as fh:
       fh.write(key)
 
